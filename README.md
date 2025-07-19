@@ -19,24 +19,24 @@ Develop and test main.py for orchestrating the pipeline
 Build and launch the app using app.py
 
 ## How to Run the Project Locally
-Step 1: Clone the Repository
+### Step 1: Clone the Repository
 git clone https://github.com/saketsn/Text-Summarizer-Project.git
 cd Text-Summarizer-Project
 
-Step 2: Create and Activate a Virtual Environment (Conda)
+### Step 2: Create and Activate a Virtual Environment (Conda)
 conda create -n summary python=3.8 -y
 conda activate summary
 
-Step 3: Install Dependencies
+### Step 3: Install Dependencies
 pip install -r requirements.txt
 
-Step 4: Run the Application
+### Step 4: Run the Application
 python app.py
 
 
 
 ## Deployment: AWS CI/CD with GitHub Actions
-Step 1: AWS Setup
+### Step 1: AWS Setup
 Log in to the AWS Console
 
 Create a new IAM user with:
@@ -45,14 +45,14 @@ AmazonEC2FullAccess
 
 AmazonEC2ContainerRegistryFullAccess
 
-Step 2: Create AWS Resources
+### Step 2: Create AWS Resources
 ECR (Elastic Container Registry): Create a new repository to store your Docker image.
 
 Example URI: your-aws-account-id.dkr.ecr.region.amazonaws.com/text-summarizer
 
 EC2 (Elastic Compute Cloud): Launch a new Ubuntu instance.
 
-Step 3: Install Docker on EC2
+### Step 3: Install Docker on EC2
 sudo apt-get update -y
 sudo apt-get upgrade -y
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -61,7 +61,7 @@ sudo usermod -aG docker ubuntu
 newgrp docker
 
 
-Step 4: Configure EC2 as a GitHub Self-Hosted Runner
+### Step 4: Configure EC2 as a GitHub Self-Hosted Runner
 Go to your GitHub Repository
 → Settings → Actions → Runners → New self-hosted runner
 
@@ -69,7 +69,7 @@ Select your operating system
 
 Follow the given shell commands to register your EC2 instance as a runner
 
-Step 5: Set Up GitHub Secrets
+### Step 5: Set Up GitHub Secrets
 In your GitHub repository → Settings → Secrets and variables → Actions, add the following secrets:
 
 Name	Description
