@@ -1,7 +1,7 @@
-## End-to-End Text Summarization Project
+# End-to-End Text Summarization Project
 This project demonstrates the complete pipeline for building a text summarizer using Natural Language Processing (NLP). It includes configuration-driven modular development, integration of multiple stages (data ingestion to model evaluation), and deployment readiness with CI/CD.
 
-# Workflow Overview
+## Workflow Overview
 Configure config.yaml
 
 Set hyperparameters in params.yaml
@@ -18,7 +18,7 @@ Develop and test main.py for orchestrating the pipeline
 
 Build and launch the app using app.py
 
-# How to Run the Project Locally
+## How to Run the Project Locally
 Step 1: Clone the Repository
 git clone https://github.com/saketsn/Text-Summarizer-Project.git
 cd Text-Summarizer-Project
@@ -35,7 +35,7 @@ python app.py
 
 
 
-# Deployment: AWS CI/CD with GitHub Actions
+## Deployment: AWS CI/CD with GitHub Actions
 Step 1: AWS Setup
 Log in to the AWS Console
 
@@ -79,7 +79,7 @@ AWS_REGION	        AWS region (e.g., us-east-1)
 AWS_ECR_LOGIN_URI	Your ECR login URI
 ECR_REPOSITORY_NAME	Name of your ECR repo
 
-# CI/CD Pipeline Summary
+## CI/CD Pipeline Summary
 Build Docker image of the project code
 
 Push the Docker image to AWS ECR
@@ -89,59 +89,13 @@ Launch EC2 instance and pull image from ECR
 Run Docker container in EC2 using GitHub Actions
 
 
-# Project Structure
+## Project Structure
 TEXT-SUMMARIZATION-NLP-PROJECT/
-├── .github/
-│   └── ... (GitHub Actions/workflow files)
-├── config/
-│   └── config.yaml                      # Main configuration file
-├── research/                            # Jupyter notebooks for experiments
-│   ├── 01_data_ingestion.ipynb
-│   ├── 02_data_validation.ipynb
-│   ├── 03_data_transformation.ipynb
-│   ├── 04_model_trainer.ipynb
-│   ├── 05_model_evaluation.ipynb
-│   ├── Text_Summarization.ipynb
-│   └── trials.ipynb
-├── src/
-│   └── textSummarizer/
-│       ├── config/
-│       │   ├── __init__.py
-│       │   └── configuration.py         # Configuration handling logic
-│       ├── components/
-│       │   ├── __init__.py
-│       │   ├── data_ingestion.py
-│       │   ├── data_transformation.py
-│       │   ├── data_validation.py
-│       │   ├── model_evaluation.py
-│       │   └── model_trainer.py
-│       ├── constants/
-│       │   └── __init__.py              # Constant values used across the project
-│       ├── entity/
-│       │   └── __init__.py              # Data class definitions
-│       ├── logging/
-│       │   └── __init__.py              # Custom logging setup
-│       ├── pipeline/
-│       │   ├── __init__.py
-│       │   ├── prediction.py
-│       │   ├── stage_01_data_ingestion.py
-│       │   ├── stage_02_data_validation.py
-│       │   ├── stage_03_data_transformation.py
-│       │   ├── stage_04_model_trainer.py
-│       │   └── stage_05_model_evaluation.py
-│       └── utils/
-│           ├── __init__.py
-│           └── common.py                # Helper functions
-├── app.py                               # Entry point for the web app
-├── Dockerfile                           # Docker setup file
-├── LICENSE
-├── main.py                              # Main pipeline runner
-├── params.yaml                          # Hyperparameters configuration
-├── README.md
-├── requirements.txt                     # Python dependencies
-├── setup.py                             # Package installation configuration
-├── template.py                          # CLI/Template generation
-└── test.py                              # Test script
+<img width="641" height="601" alt="image" src="https://github.com/user-attachments/assets/f20c81e2-2dca-4791-86d4-18c426e8d9ef" />
+<img width="724" height="644" alt="image" src="https://github.com/user-attachments/assets/baebb743-d1e4-4a63-9383-4f02ba1ba4d5" />
+
+ 
+
 
 <img width="308" height="469" alt="image" src="https://github.com/user-attachments/assets/117dadb6-2e49-459c-920e-602e0639979e" />
 <img width="387" height="348" alt="image" src="https://github.com/user-attachments/assets/df71a5bd-2515-4ef2-b0f7-7e977e038417" />
