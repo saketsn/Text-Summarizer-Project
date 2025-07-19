@@ -21,10 +21,12 @@ Build and launch the app using app.py
 ## How to Run the Project Locally
 ### Step 1: Clone the Repository
 git clone https://github.com/saketsn/Text-Summarizer-Project.git
+
 cd Text-Summarizer-Project
 
 ### Step 2: Create and Activate a Virtual Environment (Conda)
 conda create -n summary python=3.8 -y
+
 conda activate summary
 
 ### Step 3: Install Dependencies
@@ -54,15 +56,21 @@ EC2 (Elastic Compute Cloud): Launch a new Ubuntu instance.
 
 ### Step 3: Install Docker on EC2
 sudo apt-get update -y
+
 sudo apt-get upgrade -y
+
 curl -fsSL https://get.docker.com -o get-docker.sh
+
 sudo sh get-docker.sh
+
 sudo usermod -aG docker ubuntu
+
 newgrp docker
 
 
 ### Step 4: Configure EC2 as a GitHub Self-Hosted Runner
 Go to your GitHub Repository
+
 → Settings → Actions → Runners → New self-hosted runner
 
 Select your operating system
@@ -73,11 +81,16 @@ Follow the given shell commands to register your EC2 instance as a runner
 In your GitHub repository → Settings → Secrets and variables → Actions, add the following secrets:
 
 Name	Description
-AWS_ACCESS_KEY_ID	IAM user's access key
-AWS_SECRET_ACCESS_KEY	IAM user's secret access key
-AWS_REGION	        AWS region (e.g., us-east-1)
-AWS_ECR_LOGIN_URI	Your ECR login URI
-ECR_REPOSITORY_NAME	Name of your ECR repo
+
+AWS_ACCESS_KEY_ID     	IAM user's access key
+
+AWS_SECRET_ACCESS_KEY	  IAM user's secret access key
+
+AWS_REGION	            AWS region (e.g., us-east-1)
+
+AWS_ECR_LOGIN_URI     	Your ECR login URI
+
+ECR_REPOSITORY_NAME   	Name of your ECR repo
 
 ## CI/CD Pipeline Summary
 Build Docker image of the project code
