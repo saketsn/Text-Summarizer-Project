@@ -90,7 +90,8 @@ Run Docker container in EC2 using GitHub Actions
 
 
 ## Project Structure
-TEXT-SUMMARIZATION-NLP-PROJECT/
+TEXT-SUMMARIZATION-NLP-PROJECT
+
 <img width="641" height="601" alt="image" src="https://github.com/user-attachments/assets/f20c81e2-2dca-4791-86d4-18c426e8d9ef" />
 <img width="724" height="644" alt="image" src="https://github.com/user-attachments/assets/baebb743-d1e4-4a63-9383-4f02ba1ba4d5" />
 
